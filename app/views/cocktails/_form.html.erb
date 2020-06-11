@@ -1,8 +1,11 @@
-<%= simple_form_for(@cocktail) do |f| %>
-<div class="form-inputs">
+
+<div class="container">
+  <div class= 'row'>
+<%= simple_form_for(cocktail) do |f| %>
   <%= f.input :name %>
+  <%= f.submit %>
+  <% end %>
+    </div>
   </div>
-  <div class="form-actions">
-  <%= f.button :submit %>
-  </div>
-<% end %>
+</div>
+

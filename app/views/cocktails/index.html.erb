@@ -1,8 +1,8 @@
 <h1>Here your cocktails</h1>
 
-<%= render 'form', cocktail: @cockails %>
+<% @cocktails.each do |cocktail| %>
+<%= cocktail.name %>
+<%= link_to cocktail.name, cocktail_path(cocktail) %>
 
-<% @cocktail.each do |cocktail| %>
-<%  restaurant.name %>
-<%= link_to 'Back', cocktails_path %>
+<%= link_to 'Create', new_cocktail_path, class: "btn btn-primary" %>
 <% end %>
