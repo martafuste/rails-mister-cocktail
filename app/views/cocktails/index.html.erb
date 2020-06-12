@@ -11,6 +11,11 @@
       <div class="card " style="width: 18rem; margin-bottom: 10px">
         <div class="card-body">
         <h3> <%=  cocktail.name %></h3>
+        <% if cocktail.photo.attached? %>
+        <%= cl_image_tag cocktail.photo.key, width: 400, height: 300 %>
+          <% else %>
+          <%= "you can upload one" %>
+          <% end %>
           <%= link_to "show details", cocktail_path(cocktail) %>
         </div>
       </div>
