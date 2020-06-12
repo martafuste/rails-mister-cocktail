@@ -1,1 +1,15 @@
-new.html.erb
+
+<h1>Let's create a dose</h1>
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.submit %>
+  <% end %>
+
+
+
+
+
+
+

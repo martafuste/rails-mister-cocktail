@@ -5,7 +5,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
-    @dose = Dose.new
+
   end
 
   # GET /restaurants/1
@@ -27,7 +27,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktail_params)
 
     if @cocktail.save
-      redirect_to @cocktail, notice: 'Your cocktail is on the way....!'
+      redirect_to cocktail_path(@cocktail), notice: 'Your cocktail is on the way....!'
     else
       render :new
     end
