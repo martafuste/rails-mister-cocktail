@@ -1,10 +1,12 @@
 
 <div class="container">
   <div class= 'row'>
-  <%= simple_form_for(cocktail) do |f| %>
+  <div class="col-4">
+    <%= simple_form_for(cocktail) do |f| %>
     <%= f.input :name %>
     <%= f.submit class: 'btn btn-primary' %>
     <% end %>
   </div>
+</div>
 </div>
 
