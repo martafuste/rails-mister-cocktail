@@ -14,9 +14,9 @@
         <% if cocktail.photo.attached? %>
         <%= cl_image_tag cocktail.photo.key, width: 400, height: 300 %>
           <% else %>
-          <%= "you can upload one" %>
+          <%= "Soo good, want to know how to make one?" %>
           <% end %>
-          <%= link_to "show details", cocktail_path(cocktail) %>
+          <%= link_to "Show details", cocktail_path(cocktail) %>
         </div>
       </div>
       </div>
